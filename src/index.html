@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <script src="app.js"></script>
+    <title>Twitter</title>
+</head>
+
+<body class="bg-black flex justify-center ">
+    <!-- container -->
+    <div class="text-white h-screen mx-auto flex w-[1210px] ">
+        <!-- left sidebar -->
+        <div class="w-[260px] h-screen flex-col flex">
+            <div
+                class="w-12 h-12 mt-2 mb-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer flex justify-center items-center">
+                <i class="text-3xl fa-brands fa-twitter"></i>
+            </div>
+            <div class="categories flex flex-col">
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-solid fa-house"></i>Home</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-solid fa-magnifying-glass"></i>Explore</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-regular fa-bell"></i>Notifications</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-regular fa-envelope"></i>Messages</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-regular fa-rectangle-list"></i>Lists</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-regular fa-bookmark"></i>Bookmarks</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-solid fa-user-group"></i>Communities</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-solid fa-certificate"></i>Verified</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-regular fa-user"></i>Profile</p>
+                </span>
+                <span
+                    class="mb-2 text-xl w-fit p-3 hover:bg-gray-900 rounded-full transition-all duration-200 cursor-pointer">
+                    <p><i class="mr-4 fa-solid fa-ellipsis"></i>More</p>
+                </span>
+            </div>
+            <button class=" w-60 h-14 text-xl font-bold rounded-full bg-sky-500 mt-6">Tweet</button>
+            <div class="mb-3 flex items-center mt-auto mx-auto gap-x-2 px-4">
+                <img class="rounded-full w-12" src="../img/pp.jpg" alt="Profile Picture">
+                <div id="names">
+                    <p id="name" class="font-bold">Melih Kutay Kaya</p>
+                    <p id="username" class="text-white text-opacity-50">@melihkutaykaya</p>
+                </div>
+                <i class="pl-3 text-xl fa-solid fa-ellipsis"></i>
+            </div>
+
+        </div>
+        <!-- middle -->
+        <div class="w-[600px] h-screen border-r-[1px] border-l-[1px] border-gray-700 overflow-y-auto">
+            <div class="sticky top-0 bg-black">
+                <div class="p-4 font-bold">Home</div>
+                <div class="flex flex-nowrap items-center">
+                    <div
+                        class="active basis-1/2 text-center text-sm font-bold p-3 border-b-4 border-b-sky-500 hover:bg-white hover:bg-opacity-10 transition-all duration-200 cursor-pointer">
+                        For you</div>
+                    <div
+                        class="basis-1/2 text-center text-gray-500 text-sm font-medium p-3 hover:bg-white hover:bg-opacity-10 transition-all duration-200 cursor-pointer">
+                        Following</div>
+                </div>
+            </div>
+            <!-- tweet area -->
+            <div class="">
+                <div id="postarea" class="flex">
+                    <div class="pp"><img class="w-10 rounded-full m-3" src="../img/pp.jpg" alt="Profile Picture"></div>
+                    <div class="w-full px-3 py-3">
+                        <textarea oninput="auto_grow(this)"
+                            class="text-lg placeholder-white placeholder-opacity-40 outline-none resize-none bg-black w-full"
+                            placeholder="What is happening?!"></textarea>
+                    </div>
+                </div>
+                <div class="attachments flex items-center align-middle border-b-[1px] pb-4 border-gray-700">
+                    <div class="flex justify-between basis-2/5 pl-14 align-middle cursor-pointer">
+                        <i id="attachment" class="fa-regular fa-image text-sky-500 align-middle"></i>
+                        <!-- <span id="attachment" class="material-symbols-outlined text-sky-500 align-middle">gif_box</span> -->
+                        <i id="attachment" class="fa-solid fa-square-poll-vertical text-sky-500 align-middle"></i>
+                        <i id="attachment" class="fa-regular fa-face-smile text-sky-500 align-middle"></i>
+                        <i id="attachment" class="fa-regular fa-calendar text-sky-500 align-middle"></i>
+                        <i id="attachment" class="fa-solid fa-location-dot text-sky-500 align-middle"></i>
+                    </div>
+                    <div class="ml-auto mr-6 -mt-7">
+
+                        <button id="postTweetBtn"
+                            class=" w-20 h-8 text-base font-bold rounded-full bg-sky-500 mt-6 ">Tweet</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- timeline -->
+            <div class="text-sky-500 text-center py-2.5 border-b-[1px] border-gray-700 hidden">Show 455 Tweets</div>
+            <div class="tweet p-4 border-b-[1px] border-gray-700">
+                <div class="flex w-auto">
+                    <img class="w-10 mr-2 rounded-full"
+                        src="https://pbs.twimg.com/profile_images/1473412455682527240/1GZdN0Yz_400x400.jpg">
+                    <div class="flex w-fit justify-between items-start"><b class="mr-1">Grand Slam Racing</b>
+                        <p class="text-base text-white text-opacity-40 mr-2">@GrandSlamRacing</p>
+                        <p>33m</p>
+                    </div>
+                </div>
+                <div class="tweetcontent pl-12 flex flex-col gap-y-4">
+                    <p>DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.
+                        DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.</p>
+                    <img class="rounded-md border-gray-800 border-[1px]"
+                        src="https://pbs.twimg.com/media/F2mQxT8XQAEe9VI?format=jpg&name=small" alt="">
+                </div>
+                <div id="postButtons" class="flex justify-between w-auto mt-2 px-12 text-gray-600 cursor-pointer">
+                    <i class="fa-regular fa-comment hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200"></i>
+                    <i class="fa-solid fa-retweet hover:bg-green-500 hover:text-green-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-regular fa-heart hover:bg-red-500 hover:text-red-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                </div>
+            </div>
+            <div class="tweet p-4 border-b-[1px] border-gray-700">
+                <div class="flex w-auto">
+                    <img class="w-10 mr-2 rounded-full"
+                        src="https://pbs.twimg.com/profile_images/1473412455682527240/1GZdN0Yz_400x400.jpg">
+                    <div class="flex w-fit justify-between items-start"><b class="mr-1">Grand Slam Racing</b>
+                        <p class="text-base text-white text-opacity-40 mr-2">@GrandSlamRacing</p>
+                        <p>33m</p>
+                    </div>
+                </div>
+                <div class="tweetcontent pl-12 flex flex-col gap-y-4">
+                    <p>DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.
+                        DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.</p>
+                    <img class="rounded-md border-gray-800 border-[1px]"
+                        src="https://pbs.twimg.com/media/F2mQxT8XQAEe9VI?format=jpg&name=small" alt="">
+                </div>
+                <div id="postButtons" class="flex justify-between w-auto mt-2 px-12 text-gray-600 cursor-pointer">
+                    <i class="fa-regular fa-comment hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200"></i>
+                    <i class="fa-solid fa-retweet hover:bg-green-500 hover:text-green-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-regular fa-heart hover:bg-red-500 hover:text-red-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                </div>
+            </div>
+            <div class="tweet p-4 border-b-[1px] border-gray-700">
+                <div class="flex w-auto">
+                    <img class="w-10 mr-2 rounded-full"
+                        src="https://pbs.twimg.com/profile_images/1473412455682527240/1GZdN0Yz_400x400.jpg">
+                    <div class="flex w-fit justify-between items-start"><b class="mr-1">Grand Slam Racing</b>
+                        <p class="text-base text-white text-opacity-40 mr-2">@GrandSlamRacing</p>
+                        <p>33m</p>
+                    </div>
+                </div>
+                <div class="tweetcontent pl-12 flex flex-col gap-y-4">
+                    <p>DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.
+                        DTM'de bu hafta sonu durağımız Nürburgring. </br>
+
+                        *Cumartesi* </br>
+
+                        Yarış 1 - 14.15 </br>
+
+                        *Pazar* </br>
+
+                        Yarış 2 - 14.15</br>
+
+                        Red Bull TV'den ücretsiz olarak izleyebilirsiniz.</p>
+                    <img class="rounded-md border-gray-800 border-[1px]"
+                        src="https://pbs.twimg.com/media/F2mQxT8XQAEe9VI?format=jpg&name=small" alt="">
+                </div>
+                <div id="postButtons" class="flex justify-between w-auto mt-2 px-12 text-gray-600 cursor-pointer">
+                    <i class="fa-regular fa-comment hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200"></i>
+                    <i class="fa-solid fa-retweet hover:bg-green-500 hover:text-green-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-regular fa-heart hover:bg-red-500 hover:text-red-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket hover:bg-blue-500 hover:text-blue-500 p-2 hover:bg-opacity-30 rounded-full transition-all duration-200""></i>
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar -->
+        <div class=" w-[350px] h-screen px-4 pt-2">
+            <div class="search-bar px-2 py-1 h-10 flex items-center justify-around bg-[#202327] rounded-full">
+                <i class="mr-3 fa-solid fa-magnifying-glass ml-3 text-white text-opacity-50"></i>
+                <input type="text" title="Search Twitter" placeholder="Search Twitter" class="bg-[#202327] w-full h-full rounded-full outline-none text-base">
+            </div>
+            <div id="trends" class="bg-[#202327] w-full h-fit rounded-xl mt-3 pt-2">
+                <h2 class="font-bold text-xl ml-3 mb-1">Trends for you</h2>
+                <div id="trend" class="w-full flex flex-col px-3 py-2 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <b>Counter-Strike</b>
+                    <p class="text-white text-opacity-50 text-xs ">4,598 tweets</p>
+                </div>
+                <div id="trend" class="w-full flex flex-col px-3 py-2 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <b>DisneyPlus</b>
+                    <p class="text-white text-opacity-50 text-xs ">3,248 tweets</p>
+                </div>
+                <div id="trend" class="w-full flex flex-col px-3 py-2 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <b>Hugo Boss Bulls Racing</b>
+                    <p class="text-white text-opacity-50 text-xs ">2,456 tweets</p>
+                </div>
+                <div id="trend" class="w-full flex flex-col px-3 py-2 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <b>Kimi Raikkonen</b>
+                    <p class="text-white text-opacity-50 text-xs ">2,328 tweets</p>
+                </div>
+                <div id="trend" class="w-full flex flex-col px-3 py-2 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <b>Blast</b>
+                    <p class="text-white text-opacity-50 text-xs ">345 tweets</p>
+                </div>
+            </div>
+            <div class="bg-[#202327] w-full rounded-xl mt-3 pt-2 pb-0.5">
+                <h2 class="font-bold text-xl ml-3 mb-4">Who to follow</h2>
+                <div class="mb-6 flex items-center mt-auto mx-auto gap-x-2 px-4 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <img class="rounded-full w-12" src="../img/pp.jpg" alt="Profile Picture">
+                    <div id="names">
+                        <p id="name" class="font-bold">Melih Kutay Kaya</p>
+                        <p id="username" class="text-white text-opacity-50 ">@melihkutaykaya</p>
+                    </div>
+                    <button class="text-base ml-auto bg-white text-black font-medium text-opacity-80 rounded-full px-3 py-0.5">Follow</button>
+                </div>
+                <div class="mb-6 flex items-center mt-auto mx-auto gap-x-2 px-4 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <img class="rounded-full w-12" src="../img/pp.jpg" alt="Profile Picture">
+                    <div id="names">
+                        <p id="name" class="font-bold">Melih Kutay Kaya</p>
+                        <p id="username" class="text-white text-opacity-50 ">@melihkutaykaya</p>
+                    </div>
+                    <button class="text-base ml-auto bg-white text-black font-medium text-opacity-80 rounded-full px-3 py-0.5">Follow</button>
+                </div>
+                <div class="mb-6 flex items-center mt-auto mx-auto gap-x-2 px-4 hover:bg-white hover:bg-opacity-5 transition-all duration-200">
+                    <img class="rounded-full w-12" src="../img/pp.jpg" alt="Profile Picture">
+                    <div id="names">
+                        <p id="name" class="font-bold">Melih Kutay Kaya</p>
+                        <p id="username" class="text-white text-opacity-50 ">@melihkutaykaya</p>
+                    </div>
+                    <button class="text-base ml-auto bg-white text-black font-medium text-opacity-80 rounded-full px-3 py-0.5">Follow</button>
+                </div>
+            </div>
+            <p class="text-xs py-2 text-white text-opacity-60 leading-relaxed text-center">Terms of Service<br>
+                Privacy Policy<br>
+                Cookie Policy<br>
+                Imprint<br>
+                Accessibility<br>
+                Ads info<br>
+                More<br>
+                © 2023 Twitter Corp.</p>
+        </div>
+    </div>
+</body>
+
+</html>
