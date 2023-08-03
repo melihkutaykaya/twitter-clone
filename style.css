@@ -30,6 +30,7 @@ body, html {
 .sidebar {
     display: flex;
     flex-direction: column;
+    position: fixed;
     width: 250px;
     height: 100%;
     border-right: 1px solid rgb(59, 59, 59);
@@ -111,6 +112,7 @@ body, html {
 
 .content{
     width: 600px;
+    margin-left: auto;
 }
 
 .pagetitle {
@@ -146,7 +148,6 @@ body, html {
 
 #postarea {
     display: flex;
-    grid-template-columns: 60px auto;
 }
 
 
@@ -177,7 +178,7 @@ body, html {
     resize: none;
     width: 100%;
     overflow: hidden;
-    min-height: 50px;
+    min-height: 40px;
     max-height: 700px;
     margin-top: 22px;
     margin-left: 10px;
@@ -189,20 +190,95 @@ body, html {
 }
 
 #postTweetBtn {
+    padding: 10px 15px;
     border: none;
-    height: 30px;
-    width: 100px;
     border-radius: 25px;
     background-color: #1DA1F2;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     justify-self: right;
     margin-right: 20px;
+    margin-bottom: 10px;
     
+}
+
+.attachments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 520px;
+    padding-left: 80px;
+}
+
+.attachments div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+#attachment {
+    font-size: 18px;
+    color: #1DA1F2;
+}
+
+.newtweets {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #1b8dd4;
+    font-size: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(59, 59, 59);
 }
 
 .sidebar-left{
     border-left: 1px solid rgb(59, 59, 59);
     width: 380px;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.tweet{
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid rgb(59, 59, 59)
+}
+
+.tweetpp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.tweetpp {
+    height: auto;
+    width: 60px;
+    margin: 15px;
+}
+
+.tweetuser {
+    font-size: 18px;
+    padding: 15px 0;
+    display: flex;
+    width: 535px;
+}
+
+.tweetuser b {
+    margin-right: 5px;
+}
+.tweetuser p {
+    color: rgb(109, 109, 109);
+    margin-right: 5px;
+}
+
+.tweetimg {
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(97, 97, 97);
+    margin-bottom: 15px;
 }
